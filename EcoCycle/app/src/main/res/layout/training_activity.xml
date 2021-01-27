@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".TrainingActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1F1F1F"
+    >
+
+    <FrameLayout
+        android:layout_margin="30dp"
+        android:id="@+id/camera_frame"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:background="@drawable/camera_frame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_outline_photo_camera_24" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/camera_frame">
+        <Button
+            android:id="@+id/camera_button"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:textSize="18sp"
+            android:text="Camera"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:background="@drawable/camera_frame_button"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:id="@+id/gallery_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="42dp"
+            android:textSize="18sp"
+            android:text="Gallery"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:background="@drawable/gallery_frame_button" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="34dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearlayout">
+
+        <RadioGroup
+            android:id="@+id/g1RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/_1"
+                android:buttonTint="@color/white"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PET" />
+
+            <RadioButton
+                android:id="@+id/_2"
+                android:buttonTint="@color/white"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PE-HD" />
+
+            <RadioButton
+                android:id="@+id/_3"
+                android:buttonTint="@color/white"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PVC" />
+
+            <RadioButton
+                android:id="@+id/_4"
+                android:buttonTint="@color/white"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PE-LD" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/g2RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/_5"
+                android:buttonTint="@color/white"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PP" />
+
+            <RadioButton
+                android:id="@+id/_6"
+                android:buttonTint="@color/white"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PS" />
+
+            <RadioButton
+                android:id="@+id/_7"
+                android:buttonTint="@color/white"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resins" />
+
+            <RadioButton
+                android:id="@+id/_8"
+                android:buttonTint="@color/white"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Not a plastic" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/trainBtn"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_margin="30dp"
+        android:background="@drawable/train_btn"
+        android:text="Train"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
